@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="../ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../npm/bootstrap-icons%401.13.1/font/bootstrap-icons.min.css">
+    <title>FALINDA</title>
+
+    <!-- первая кнопочка -->
+    <style>
+    .custom-button {
+        font-size: clamp(10px, 1vw, 34px); /* шрифт подгоняется под размер окна */
+        text-transform: uppercase;
+        display: inline-block; /* подстраивание под содержимое */
+        padding: 10px 40px; /* уменьшение вертикального отступа */
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 0%;
+        background-color: rgb(255, 255, 255);
+        min-width: 100px; /* минимальная ширина */
+    }
+    </style>
+
+    <!-- кнопочка вторая -->
+    <style>
+    .custom-button2 {
+        font-size: 16px;
+        color: #363636;
+        text-transform: none; /* отрубил автоматическое преобразование */
+        width: auto;
+        height: auto;
+        border: none; /* отключил границы */
+        background-color: transparent; /* фончик прозрачный */
+        padding: 0;
+        cursor: 0;
+        margin-top: 8px;
+    }
+    </style>
+
+        </head>
+        <body>
+<!-- шапка сайта -->
+    <div style="margin-top: 50px"></div>
+    <nav class="navbar-expland-lg bg-body-white">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <!-- левая часть, пункты главная весна и т.д -->
+           <div class="d-none d-lg-flex">
+      <ul class="navbar-nav flex-row mb-0">
+        <li class="nav-item me-3">
+          <a class="nav-link fs-6 active" aria-current="page" href="#">ГЛАВНАЯ</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link fs-6" href="#">Весна 2025</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link fs-6" href="#">Осень 2025</a>
+        </li>
+      </ul>
+    </div>
+<div style="margin-bottom: 40px;"><div>
+    <!-- центальное лого -->
+     <a class="navbar-brand mx-auto position-absolute start-50 translate-middle-x" href="#">
+        <img src="image/falinda.png" alt="Лого" style="max-width: 120px;">
+     </a>
+
+     <!-- инфа в правой части -->
+      <div class="d-none d-lg-flex">
+        <ul class="navbar-nav flex-row mb-0">
+            <li class="nav-item me-3">
+          <a class="nav-link fs-6" href="#">О нас</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link fs-6" href="#">Контакты</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary custom-button2" data-bs-toggle="modal" href="#staticBackdrop">Оформить заказ</a>
+        </li>
+      </ul>
+      </div>
+
+      <!-- меню для мобильных -->
+       <button class="navbar-toggler position-absolute end-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" ariz-expanded="false" aria-label="Переключение в навигации">
+        <span class="bi bi-list"></span>
+       </button>
+    </div>
+
+    <!-- скрытое меню для мобильных -->
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <!-- все пункты в одну колонку -->
+    <ul class="navbar-nav flex-column mb-2 mb-lg-0 d-lg-none text-end w-100 p-5">
+      <!-- Левая часть -->
+      <li class="nav-item mb-2">
+        <a class="nav-link fs-6 active" aria-current="page" href="#">ГЛАВНАЯ</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link fs-6" href="#">Весна 2025</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link fs-6" href="#">Осень 2025</a>
+      </li>
+
+      <!-- Правая часть -->
+      <li class="nav-item mb-2">
+        <a class="nav-link fs-6" href="#">О нас</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link fs-6" href="#">Контакты</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="btn btn-primary custom-button2 text-end w-100" data-bs-toggle="modal" href="#staticBackdrop">СДЕЛАТЬ ЗАКАЗ</a>
+      </li>
+    </ul>
+  </div>
+</nav>  
+
+<div style="margin-bottom: 40px;"></div>
+
+<!-- заголовок -->
+<div>
+ <!-- для большого экрана две картинки одного размера -->
+<div class="d-none d-md-flex justify-content-center gap-3 flex-wrap">
+  <!-- обертка для первой картинки и кнопка -->
+  <div class="d-flex flex-column align-items-center" style="max-width: 45%;">
+    <img src="image/Group 35.png" class="img-fluid" alt="Фото 1" style="max-width: 100%; max-height: 440px;">
+    <button type="button" class="custom-button mt-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Оформить  заказ</button>
+  </div>
+    
+ <!-- вторая картинка -->
+  <div style="max-width: 45%;">
+    <img src="image/Group 36.png" class="img-fluid" alt="Фото 3" style="max-width: 100%; max-height: 440px;">
+  </div>
+</div>
+
+<!-- одна картинка по центру для мобилки -->
+<div class="d-flex d-md-none justify-content-center my-4 flex-column align-items-center gap-2">
+  <img src="image/Group 35.png" class="img-fluid" alt="Фото 1" style="max-width: 80%; max-height: 440px;">
+  <img src="image/Group 36.png" class="img-fluid" alt="Фото 2" style="max-width: 80%; max-height: 440px;">
+  <div class="text-center mt-4">
+<button type="button" class="custom-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Оформить заказ</button>
+</div>
+</div>
+ <div style="margin-bottom: 45px;"></div>
+ </div>
+
+  <!-- Новая колекция -->
+<div>
+<!-- колаж мобилки -->
+<div>
+<div class="d-block d-md-none">
+       <div class="bold-text text-center" style="text-transform: uppercase; font-weight:bolder; font-size: clamp(26px, 1vw, 44px);">
+  <p>Весна 2026</p>
+  <div style="margin-bottom: 40px;"></div>
+</div>
+  <div class="container my-4">
+    <!-- Контейнер с двумя кнопками -->
+    <div class="row">
+      <!-- Первая колонка с двумя изображениями -->
+      <div class="col-6 d-flex flex-column gap-4">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection1.png" class="img-fluid rounded" alt="Фото 1">
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection2.png" class="img-fluid rounded" alt="Фото 2">
+        </div>
+      </div>
+       <!-- Вторая колонка с двумя изображениями -->
+      <div class="col-6 d-flex flex-column gap-4">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection3.png" class="img-fluid rounded" alt="Фото 3">
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection1.png" class="img-fluid rounded" alt="Фото 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- CSS for maks visoti izobr -->
+<style>
+img {
+  max-height: 330px;
+}
+</style>
+
+<!-- ксс для фикс высоты и пропорций -->
+<style>
+  /* фикс высоты изображений */
+  .carousel-img {
+    height: 540px; 
+    object-fit: cover; 
+  }
+</style>
+
+<!-- колажек -->
+<div>
+   <div style="margin-bottom: 100px;"></div>
+<div class="d-none d-md-flex justify-content-center">
+       <div class="bold-text text-center" style="text-transform: uppercase; font-weight:bolder; font-size: clamp(25px, 1vw, 43px);">
+  <p>Весна 2025</p>
+  <div style="margin-bottom: 45px;"></div>
+</div>
+</div>
+<div class="d-none d-md-flex justify-content-center gap-2 align-items-center flex-wrap">
+  <!-- боковая кратинка -->
+  <img src="image/collection1.png" class="img-fluid" alt="Фото 1" style="max-width: 10%;">
+  
+  <!-- 2 картинка -->
+  <img src="image/collection1.png" class="img-fluid" alt="Фото 2" style="max-width: 20%;">
+  
+  <!-- картинка по центру -->
+  <img src="image/collection2.png" class="img-fluid" alt="Фото 3" style="max-width: 28%; max-height: 450px;">
+  
+  <!-- 4 картинка -->
+  <img src="image/collection3.png" class="img-fluid" alt="Фото 4" style="max-width: 20%;">
+  
+  <!-- 5 картинка -->
+  <img src="image/collection3.png" class="img-fluid" alt="Фото 5" style="max-width: 15%;">
+</div>
+</div>
+</div>
+
+<div style="margin-bottom: 40px;"></div>
+
+<div class="text-center">
+<button type="button" class="custom-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Оформить заказ</button>
+</div>
+
+<div style="margin-bottom: 65px;"></div>
+
+<!-- о нас -->  
+<div class="page-wrapper ">
+  <div class="border-container position-relative ">
+    <div class="mb-0 text-center responsive-text mt-4 p-4" style="font-weight: lighter; font-size: clamp(14px, 1vw, 20px);"> 
+      <h2>О нас</h2>
+      <div style="margin-bottom: 45px;"></div>
+        <p>Добро пожаловать в магазин одежды Falinda в Чебоксарах! Мы предлагаем стильную и качественную одежду, 
+          которая поможет вам подчеркнуть вашу индивидуальность.</p>
+        <p>В нашем ассортименте – разнообразные коллекции от классики до современных трендов, подобранные с заботой о каждом клиенте. 
+          Мы гордимся тем, что поддерживаем местные инициативы и стремимся создать уютную атмосферу для шопинга. </p>
+          <div style="margin-bottom: 45px;"></div>
+          <p>Следите за нашими новинками и акциями, и найдите свой идеальный стиль в Falinda!</p>
+          <div style="margin-bottom: 85px;"></div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom: 55px;"></div>
+
+<!-- хотите творитиь с нами? -->
+<div>
+<div class="mb-0 text-center responsive-text"> 
+        <div class="bold-text" style="text-transform: uppercase; font-weight:bolder; font-size: clamp(25px, 1vw, 43px);">
+  <p>хотите сотрудничать с нами?</p>
+</div>
+        <p style="font-weight: lighter; font-size: clamp(17px, 1vw, 24px);">Оставьте свой номер телефона и электронную почту, и мы свяжемся с вами!</p>
+        </div>
+<div class="container">
+   <!-- Для больших экранов линии в ряд -->
+  <div class="d-none d-md-flex justify-content-center gap-4 flex-wrap">
+    <div class="d-flex flex-column align-items-start">
+      <div class="mb-2" style="color: #9e9e9e;">Имя</div>
+      <div class="line" style="width: 25vw; max-width: 300px; height: 2px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column align-items-start">
+      <div class="mb-2" style="color: #9e9e9e;">
+    <span style="color: #000;">+7</span> (000) 000-00-00
+  </div>
+      <div class="line" style="width: 30vw; max-width: 350px; height: 3px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column align-items-start">
+      <div class="mb-2" style="color: #9e9e9e;">E-mail</div>
+      <div class="line" style="width: 30vw; max-width: 350px; height: 3px; background-color: #000;"></div>
+    </div>
+  </div> 
+
+  <!-- для мобилок линии в столбик -->
+  <div class="d-md-none d-flex flex-column align-items-center gap-3">
+    <div class="d-flex flex-column mt-4" style="max-width: 400px;">
+      <div class="mb-2" style="color: #9e9e9e;">Имя</div>
+      <div class="line" style="width: 290px; height: 3px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column mt-4" style="max-width: 400px;">
+      <div class="mb-2" style="color: #9e9e9e;">
+    <span style="color: #000;">+7</span> (000) 000-00-00
+  </div>
+      <div class="line" style="width: 290px; height: 3px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column mt-4" style="max-width: 400px;">
+      <div class="mb-2" style="color: #9e9e9e;">E-mail</div>
+      <div class="line" style="width: 290px; height: 3px; background-color: #000;"></div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+<div style="margin-bottom: 40px;"></div>
+
+<div class="text-center">
+<button type="button" class="custom-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">отправить</button>
+</div>
+</div>
+</div>
+
+<div style="margin-bottom: 45px;"></div>
+
+<!-- повтор новой колекции -->
+ <div>
+<div class="d-block d-md-none">
+     <div class="bold-text text-center" style="text-transform: uppercase; font-weight:bolder; font-size: clamp(25px, 1vw, 43px);">
+  <p>Весна 2026</p>
+</div>
+<div style="margin-bottom: 45px;"></div>
+  <div class="container my-4">
+    <!-- две колонки -->
+    <div class="row g-3">
+      <!-- Первая колонка с двумя изображениями -->
+      <div class="col-6 d-flex flex-column gap-4">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection1.png" class="img-fluid rounded" alt="Фото 1">
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection2.png" class="img-fluid rounded" alt="Фото 2">
+        </div>
+      </div>
+      <!-- Вторая колонка с двумя изображениями -->
+      <div class="col-6 d-flex flex-column gap-4">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection3.png" class="img-fluid rounded" alt="Фото 3">
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="image/collection1.png" class="img-fluid rounded" alt="Фото 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+img {
+  max-height: 330px;
+}
+</style>
+<style>
+  .carousel-img {
+    height: 540px;
+    object-fit: cover;
+  }
+</style>
+
+<!-- колажек -->
+<div>
+   <div style="margin-bottom: 100px;"></div>
+<div class="d-none d-md-flex justify-content-center">
+       <div class="bold-text text-center" style="text-transform: uppercase; font-weight:bolder; font-size: clamp(25px, 1vw, 43px);">
+  <p>Весна 2026</p>
+  <div style="margin-bottom: 45px;"></div>
+</div>
+</div>
+<div class="d-none d-md-flex justify-content-center gap-2 align-items-center flex-wrap">
+  <!-- боковая кратинка -->
+  <img src="image/collection1.png" class="img-fluid" alt="Фото 1" style="max-width: 10%;">
+  
+  <!-- 2 картинка -->
+  <img src="image/collection1.png" class="img-fluid" alt="Фото 2" style="max-width: 20%;">
+  
+  <!-- картинка по центру -->
+  <img src="image/collection2.png" class="img-fluid" alt="Фото 3" style="max-width: 28%; max-height: 450px;">
+  
+  <!-- 4 картинка -->
+  <img src="image/collection3.png" class="img-fluid" alt="Фото 4" style="max-width: 20%;">
+  
+  <!-- 5 картинка -->
+  <img src="image/collection3.png" class="img-fluid" alt="Фото 5" style="max-width: 15%;">
+</div>
+</div>
+</div>
+
+<div style="margin-bottom: 40px;"></div>
+
+<div class="text-center">
+<button type="button" class="custom-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Оформить заказ</button>
+</div>
+
+<div style="margin-bottom: 65px;"></div>
+
+<!-- Хотите сделать заказ? -->
+<div class="page-wrapper ">
+  <div class="border-container position-relative">
+    <div class="mb-0 text-center responsive-text"> 
+<div class="bold-text" style="text-transform: uppercase; font-weight: bold; font-size: clamp(26px, 1vw, 54px);">
+  <p>хотите оформить заказ или остались вопросы?</p>
+</div>
+   <div class="fw-normal">
+        <p>Заполните форму, и мы свяжемся с Вами в ближайшее время!</p>
+        </div>
+            </div>
+            <div style="margin-bottom: 70px;"></div>
+       <div class="container">
+
+<!-- Для больших экранов линии в ряд -->
+  <div class="d-none d-md-flex justify-content-center gap-4 flex-wrap">
+    <div class="d-flex flex-column align-items-start">
+      <div class="mb-2" style="color: #9e9e9e;">Имя</div>
+      <div class="line" style="width: 25vw; max-width: 300px; height: 2px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column align-items-start">
+      <div class="mb-2" style="color: #9e9e9e;">
+    <span style="color: #000;">+7</span> (000) 000-00-00
+  </div>
+      <div class="line" style="width: 30vw; max-width: 350px; height: 3px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column align-items-start">
+      <div class="mb-2" style="color: #9e9e9e;">E-mail</div>
+      <div class="line" style="width: 30vw; max-width: 350px; height: 3px; background-color: #000;"></div>
+    </div>
+  </div> 
+
+  <!-- для мобилок линии в столбик -->
+  <div class="d-md-none d-flex flex-column align-items-center gap-3">
+    <div class="d-flex flex-column mt-4" style="max-width: 400px;">
+      <div class="mb-2" style="color: #9e9e9e;">Имя</div>
+      <div class="line" style="width: 290px; height: 3px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column mt-4" style="max-width: 400px;">
+      <div class="mb-2" style="color: #9e9e9e;">
+    <span style="color: #000;">+7</span> (000) 000-00-00
+  </div>
+      <div class="line" style="width: 290px; height: 3px; background-color: #000;"></div>
+    </div>
+    <div class="d-flex flex-column mt-4" style="max-width: 400px;">
+      <div class="mb-2" style="color: #9e9e9e;">E-mail</div>
+      <div class="line" style="width: 290px; height: 3px; background-color: #000;"></div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom: 40px;"></div>
+
+<div class="text-center">
+<button type="button" class="custom-button " data-bs-toggle="modal" data-bs-target="#staticBackdrop">ОТПРАВИТЬ</button>
+</div>
+  </div>
+</div>
+
+<div style="margin-bottom: 45px;"></div>
+
+<!-- инф поле -->
+ <div>
+  <!-- большой экран -->
+<div class="container my-4 d-none d-md-block">
+  
+  <!-- контакты -->
+<div class="col-6 col-md-3 mb-3">
+  <div class="p-3 text-start">
+    <div>
+    <h2 class="mb-2 fw-bold">Контакты
+    </h2></div>
+    <!-- иконки и текст -->
+    <div class="mt-3" style="display: flex; align-items: center; margin-bottom: 8px;">
+      <i class="fas fa-phone-alt" style="margin-right: 6px;"></i>
+      <span style="color: #000000;">8 800 770-02-27</span>
+    </div>
+    <div class="mt-4" style="display: flex; align-items: center;">
+      <i class="fas fa-envelope" style="margin-right: 6px;"></i>
+      <span style="color: #000000;">Falindasales@yandex.ru</span>
+    </div>
+  </div>
+</div>
+<div style="margin-bottom: 55px;"></div>
+<div class="w-100" style="height: 1px; background-color: #000;"></div>
+
+ <!-- изображения и колонки -->
+  <div class="d-flex justify-content-between align-items-start flex-row">
+    <!-- изображение с отпуспом сверху -->
+    <div style="flex: 1; max-width: 40%;" class="mt-3">
+      <img src="image/falinda.png" alt="Описание" style="width: 100%; max-width: 140px;" class="img-fluid">
+    </div>
+  <!-- колонки слева -->
+  <div class="d-flex justify-content-end align-items-start">
+    <!-- первая колонка -->
+<div class="d-flex flex-wrap gap-1 gap-md-1">
+<div class="p-1 text-start mt-3" style="margin-top: 3px;">
+  <p class="mb-1 fw-light text" style="
+    text-transform: uppercase;
+    font-size: clamp(3px, 1.5vw, 13px);
+  ">ГЛАВНАЯ</p>
+</div>
+<div class="p-1 text-start mt-3" style="margin-top: 3px;">
+  <p class="mb-1 fw-light text" style="
+    text-transform: uppercase;
+    font-size: clamp(3px, 1.5vw, 13px);
+  ">Весна 2025</p>
+</div>
+<div class="p-1 text-start mt-3" style="margin-top: 3px;">
+  <p class="mb-1 fw-light text" style="
+    text-transform: uppercase;
+    font-size: clamp(3px, 1.5vw, 13px);
+  ">Осень 2025</p>
+</div>
+<div class="p-1 text-start mt-3" style="margin-top: 3px;">
+  <p class="mb-1 fw-light text" style="
+    text-transform: uppercase;
+    font-size: clamp(3px, 1.5vw, 13px);
+  ">О нас</p>
+</div>
+<div class="p-1 text-start mt-3" style="margin-top: 3px;">
+  <p class="mb-1 fw-light text" style="
+    text-transform: uppercase;
+    font-size: clamp(3px, 1.5vw, 13px);
+  ">Контакты</p>
+</div>
+<div class="p-1 text-start mt-3" style="margin-top: 4px;">
+  <p class="mb-1 fw-light text" style="
+    text-transform: uppercase;
+    font-size: clamp(3px, 1.5vw, 13px);
+  ">Оформить заказ</p>
+</div>
+</div>
+  </div>
+</div>
+</div>
+
+<!-- мобилки -->
+<div class="container my-4 d-block d-md-none">
+  <!-- линии и содержание -->
+<div class="col-6 col-md-3 mb-3">
+  <div class="p-3 text-start">
+    <div>
+    <h2 class="mb-2 fw-bold">Контакты
+    </h2></div>
+    <!-- иконки и текст -->
+    <div class="mt-3" style="display: flex; align-items: center; margin-bottom: 8px;">
+      <i class="fas fa-phone-alt" style="margin-right: 6px;"></i>
+      <span style="color: #000000;">8 800 770-02-27</span>
+    </div>
+    <div class="mt-4" style="display: flex; align-items: center;">
+      <i class="fas fa-envelope" style="margin-right: 6px;"></i>
+      <span style="color: #000000;">Falindasales@yandex.ru</span>
+    </div>
+  </div>
+</div>
+<div style="margin-bottom: 60px;"></div>
+<div class="w-100" style="height: 2px; background-color: #000;"></div>
+
+<!-- изобр и колонки -->
+  <div class="d-flex justify-content-between align-items-start flex-row">
+    <!-- изображение слева с отпустом  -->
+    <div style="flex: 1; max-width: 45%;" class="mt-2">
+      <img src="image/falinda.png" alt="Описание" style="width: 100%; max-width: 140px;" class="img-fluid">
+    </div>
+    <!-- колонка справа -->
+    <div class="d-flex justify-content-end" style="flex: 1; max-width: 75%;">
+  <div class="d-flex" style="gap: 35px;"> <!-- uvelichil rasstoyanie mezhdu kolonkami -->
+    <!-- первая колонка -->
+    <div class="mb-2" style="min-width: 100px;">
+      <div class="p-1 text-start">
+        <p class="mb-1 fw-light text" style="text-transform: uppercase;">ГЛАВНАЯ</p>
+        <p class="mb-1 fw-light text" style="text-transform: uppercase;">Весна 2026</p>
+        <p class="mb-1 fw-light text" style="text-transform: uppercase;">Осень 2026</p>
+      </div>
+    </div>
+    <!-- вторая колонка -->
+    <div style="min-width: 100px;">
+      <div class="p-1 text-start">
+        <p class="mb-1 fw-light text" style="text-transform: uppercase;">О нас</p>
+        <p class="mb-1 fw-light text" style="text-transform: uppercase;">Контакты</p>
+        <p class="mb-1 fw-light text" style="text-transform: uppercase;">Оформить заказ</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="margin-bottom: 55px;"></div>    
+
+<!-- мадальное окно форма -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 800px; margin-top: -50px;">
+    <div class="modal-content">
+      <div class="modal-header d-flex align-items-center justify-content-center position-relative">
+        <p class="modal-title display-6 text-center w-100 fs-3" style="text-transform: uppercase; font-weight: 400;" id="staticBackdropLabel">хотите сделать заказ?</p>
+        <button type="button" class="btn-close position-relative" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <p class="display-6 text-center w-100 fs-5" style="text-transform: uppercase; font-weight: 200;">Заполните форму ниже.</p>
+      <div class="modal-body">
+
+        <!-- для всей формы -->
+        <div class="container my-4">
+          <!-- вертикальный стек полей -->
+          <div class="d-flex flex-column align-items-center gap-5">
+            <!-- имя -->
+            <input type="text" class="form-control" placeholder="ИМЯ" aria-label="Имя" style="
+                border-radius: 0; 
+                width: 340px; 
+                height: 70px; 
+                border: 2px solid #9c9c9c; 
+              ">
+            <!-- Номер телефона -->
+            <input type="text" class="form-control" placeholder="+7 (___) ___-__-__ " aria-label="+7 (___) ___-__-__ " style="
+                border-radius: 0; 
+                width: 340px; 
+                height: 70px;
+                border: 2px solid #9c9c9c;
+              ">
+            <!-- Почта -->
+            <input type="email" class="form-control" placeholder="Почта" aria-label="Почта" style="
+                border-radius: 0; 
+                width: 340px; 
+                height: 70px;
+                border: 2px solid #9c9c9c;
+              ">
+          </div>
+        </div>
+        <!-- кнопка отправки -->
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="custom-button " data-bs-toggle="modal" data-bs-target="#spasibo">ОТПРАВИТЬ</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- мадальное окно спасибо -->
+<div class="modal fade" id="spasibo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="spasiboLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="background-color: white; position: relative;">
+      <div class="modal-header" style="border: none;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <!-- позиция -->
+      <div class="modal-body d-flex flex-column justify-content-center align-items-center p-3" style="height:300px;">
+        <!-- уменьшенное спасибо -->
+        <h5 class="display-5 text-center mb-3" style="margin-top: -100px; font-size: 2rem; font-weight: normal;">СПАСИБО!</h5>
+        <!-- текст меньше вышек -->
+        <p class="text-center mb-0" style="font-size: 1rem;">Мы свяжемся с вами в ближайшее время</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
